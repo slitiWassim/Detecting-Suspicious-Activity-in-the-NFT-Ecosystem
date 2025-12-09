@@ -1,5 +1,5 @@
-# Drone-Guard: A Self-Supervised Deep Learning Framework for Spatiotemporal Anomaly Detection in UAV Surveillance Videos
-This is the code for **[Drone-Guard: A Self-Supervised Deep Learning Framework for Spatiotemporal Anomaly Detection in UAV Surveillance Videos](https://github.com/slitiWassim/Drone-Guard)** .
+# Detecting Suspicious Activity in the NFT Ecosystem using Temporal Graph Analysis
+This is the code for **[Detecting Suspicious Activity in the NFT Ecosystem using Temporal Graph Analysis](https://github.com/slitiWassim/Detecting-Suspicious-Activity-in-the-NFT-Ecosystem)** .
 
 ### [Project](https://slitiwassim.github.io/Drone-Guard/) | [Video](https://www.youtube.com/watch?v=c4U8tkQkX7g) | [Paper]()
  
@@ -32,8 +32,8 @@ Install the required packages:
   
 Clone this repo:
 
-    git clone https://github.com/slitiWassim/Drone-Guard.git
-    cd Drone-Guard/
+    git clone https://github.com/slitiWassim/Detecting-Suspicious-Activity-in-the-NFT-Ecosystem.git
+    cd Detecting-Suspicious-Activity-in-the-NFT-Ecosystem/
 
 We evaluate `Drone-Guard` on:
 | Dataset | Link                                                                                  |
@@ -195,8 +195,8 @@ Paper submitted
 ## Contact
 For any question, please file an [issue](https://github.com/slitiWassim/Drone-Guard/issues) or contact:
 
-    Wassim Sliti : wassim.sliti@ept.ucar.tn
+    Wassim Sliti : wassim.sliti@upm.es
 
 ## Acknowledgement
 
-The code is built on top of code provided by Le et al. [ github ](https://github.com/vt-le/astnet.git)  
+This work was carried out within the STRAST Research Group at the Information Processing and Telecommunications Center (IPTC), Universidad Politécnica de Madrid, as part of the [ CEDAR ](https://cedar-heu-project.eu/)   project, funded by the Horizon Europe Programme (Grant Agreement No. 101135577). 
