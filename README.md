@@ -1,23 +1,13 @@
 # Detecting Suspicious Activity in the NFT Ecosystem using Temporal Graph Analysis
 This is the code for **[Detecting Suspicious Activity in the NFT Ecosystem using Temporal Graph Analysis](https://github.com/slitiWassim/Detecting-Suspicious-Activity-in-the-NFT-Ecosystem)** .
 
-### [Project](https://slitiwassim.github.io/Drone-Guard/) | [Video](https://www.youtube.com/watch?v=c4U8tkQkX7g) | [Paper]()
+### [Project](https://slitiwassim.github.io/Detecting-Suspicious-Activity-in-the-NFT-Ecosystem/) | [Dataset]() | [Paper]()
  
-## Related Works
-> **ANDT**: See [ANDT : Anomaly detection in aerial videos with transformers ](https://github.com/Jin-Pu/Drone-Anomaly).
 
-> **HSTforU**: See [HSTforU: Anomaly Detection in Aerial and Ground-based Videos with Hierarchical Spatio-Temporal Transformer for U-net](https://github.com/vt-le/HSTforU/tree/main).
+## Framework Overview
 
-> **FastAno**: See [FastAno: Fast Anomaly Detection via Spatio-temporal Patch Transformation](https://github.com/codnjsqkr/FastAno_official).
-
-<a href="static/videos/Bike_video.gif" target="_blank">
-    <image style="border: 2px solid rgb(201, 196, 196);" src="static/videos/Bike_video.gif"  width="100%">
-</a>
-
-## Model
-
-<a href="static/images/Model-Architecture.png" target="_blank">
-    <image style="border: 2px solid rgb(201, 196, 196);" src="static/images/Model-Architecture.png" width="100%">
+<a href="static/images/framework_TKG.png" target="_blank">
+    <image style="border: 2px solid rgb(201, 196, 196);" src="static/images/framework_TKG.png" width="100%">
 </a>
 
 
@@ -35,20 +25,24 @@ Clone this repo:
     git clone https://github.com/slitiWassim/Detecting-Suspicious-Activity-in-the-NFT-Ecosystem.git
     cd Detecting-Suspicious-Activity-in-the-NFT-Ecosystem/
 
-We evaluate `Drone-Guard` on:
-| Dataset | Link                                                                                  |
-|--|---------------------------------------------------------------------------------------|
-| UCSD Ped2 | [![Google drive](https://badgen.net/static/Homepage/Ped2/blue)](http://www.svcl.ucsd.edu/projects/anomaly/dataset.html) |
-| CUHK Avenue | [![Google drive](https://badgen.net/badge/Homepage/Avenue/cyan)](http://www.cse.cuhk.edu.hk/leojia/projects/detectabnormal/dataset.html) |
-| ShanghaiTech | [![Google drive](https://badgen.net/badge/Homepage/ShanghaiTech/green?)](https://svip-lab.github.io/dataset/campus_dataset.html) |
-| Drone-Anomaly | [![Google drive](https://badgen.net/badge/Homepage/Drone-Anomaly/yellow)](https://github.com/Jin-Pu/Drone-Anomaly)    |
+##  Data Collection and Preparation
+
+
+
+
+
+<a href="static/images/data_collection_preparation.png" target="_blank">
+    <image style="border: 2px solid rgb(201, 196, 196);" src="static/images/data_collection_preparation.png" width="100%">
+</a>
+
+
 
 A dataset is a directory with the following structure:
   ```bash
   $ tree data
   ped2/avenue
   ├── training
-  │   └── frames
+  │   └── mapping
   │       ├── ${video_1}$
   │       │   ├── 000.jpg
   │       │   ├── 001.jpg
@@ -58,71 +52,28 @@ A dataset is a directory with the following structure:
   │       │   └── ...
   │       └── ...
   └── testing
-      └── frames
-          ├── ${video_1}$
-          │   ├── 000.jpg
-          │   ├── 001.jpg
-          │   └── ...
-          ├── ${video_2}$
-          │   ├── 000.jpg
-          │   └── ...
-          └── ...
- 
-  
-  shanghaitech
-  ├── training
-  │   └── frames
-  │       ├── ${video_1}$
-  │       │   ├── 000.jpg
-  │       │   ├── 001.jpg
-  │       │   └── ...
-  │       ├── ${video_2}$
-  │       │   ├── 00.jpg
-  │       │   └── ...
-  │       └── ...
-  └── testing
-      └── frames
-          ├── ${video_1}$
-          │   ├── 000.jpg
-          │   ├── 001.jpg
-          │   └── ...
-          ├── ${video_2}$
-          │   ├── 000.jpg
-          │   └── ...
-          └── ...
-
-
-  drone
-  ├──bike
-  │  ├──training
-  │  │  └── frames
-  │  │      ├── ${video_1}$
-  │  │      │   ├── 0.jpg
-  │  │      │   ├── 1.jpg
-  │  │      │   └── ...
-  │  │      ├── ${video_2}$
-  │  │      │   ├── 00.jpg
-  │  │      │   └── ...
-  │  │      └── ...
-  │  ├── testing
-  │  │   └── frames
-  │  │       ├── ${video_1}$
-  │  │       │   ├── 000.jpg
-  │  │       │   ├── 001.jpg
-  │  │       │   └── ...
-  │  │       ├── ${video_2}$
-  │  │       │   ├── 000.jpg
-  │  │       │   └── ...
-  │  │       └── ...
-  │  └── annotation
-  │      ├── 01.npy
-  │      ├── 02.npy
-  │      └── ...
-  ├── highway
-  │   ├── ...
-  └── ...
   
   ```
+
+### Data description
+| Descriptions | Statistics                                                                                  |
+|--|---------------------------------------------------------------------------------------|
+|Start date(dd-mm-yyyy,UTC) | 23-06-2017 21:05 |
+|End date (dd-mm-yyyy, UTC)| 22-12-2023 19:06 |
+|Number of NFT collections | 1,746,379 |
+|Number of NFT tokens |41,292,572 |
+|Number of account addresses| 7,062,831 |
+|Number of transactions |77,735,708 |
+|Chains | 10 |
+
+
+
+## Temporal Cycles Detection
+
+<a href="static/images/temporal_cycles.png" target="_blank">
+    <image style="border: 2px solid rgb(201, 196, 196);" src="static/images/temporal_cycles.png" width="100%">
+</a>
+
 
 ## Training
 To train `Drone-Guard` on a dataset, run:
